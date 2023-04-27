@@ -15,7 +15,7 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-const val BASE_URL = "https://pokeapi.co/api/v2/"
+const val BASE_URL = "https://pokeapi.co/api/v2/pokemon/"
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             if (inputSearchText.text.toString().isNotEmpty()
             ) {
 
-                //getPokemonData(inputSearchText.text.toString())
+                getPokemonData(inputSearchText.text.toString())
 
                 val searchItem = SearchItem(inputSearchText.text.toString())
                 db.insertData(searchItem)
