@@ -59,7 +59,9 @@ class MainActivity : AppCompatActivity() {
 
                 val myStringBuilder = StringBuilder()
 
-                myStringBuilder.append(responseBody.name)
+                myStringBuilder.append("NAME:  " + responseBody.name.uppercase())
+                myStringBuilder.append("\nHEIGHT:  " + String.format("%.1f", responseBody.height.toFloat()/10) + "  METERS") //the API provides decimeters lol
+                myStringBuilder.append("\nWEIGHT:  " + String.format("%.1f", responseBody.weight.toFloat()/4.5)  + "  POUNDS") //the API provides hectograms, so cursed
 
                 val myTextView: TextView = findViewById(R.id.tvResult)
                 myTextView.text = myStringBuilder
